@@ -1,0 +1,103 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.5/schema.json
+cv:
+  name: Pierre Ollivier
+  location: Paris, France
+  email: pollivie@student.42.fr
+  phone: +33 7 85 61 33 47
+  social_networks:
+    - network: LinkedIn
+      username: pollivie
+    - network: GitHub
+      username: pierrelgol
+  sections:
+    sommaire:
+      - "Étudiant Ecole 42 - Paris - RNCP 7."
+      - "Spécialisé en C/C++/Zig/ AVR, ESP32 et Linux. Passionné par la conception de code robuste et temps réel, particulièrement dans le secteur de la défense."
+    compétences:
+      - label: Outils
+        details: C, C++, Zig, Bash, Rust, Python, Java, Git, Qt, SDL, SQL, Pytorch, Numpy
+      - label: Plateformes
+        details: Linux, Windows, AVR, ESP32, Raspberry Pi, RTOS (FreeRTOS, Zephyr), Docker
+      - label: Langues
+        details: Français (C2), Anglais (C2), Espagnole (B1), Russe (A1)
+    expérience:
+      - company: Thales
+        position: Ingénieur Logiciel Embarqué (Alternance)
+        start_date: 2025-09
+        end_date: present
+        location: France
+        highlights:
+          - "Refonte du code legacy C++ vers C pur, supprimant Libcamera/OpenCV pour faciliter la cross-compilation et réduire le temps de build (6m → 20s)."
+          - "Livraison d'un kernel Linux sur-mesure avec drivers propriétaires, réduisant le démarrage (22s → 3s) et la consommation (450mA → 280mA)."
+          - "Architecture d'un pipeline V4L2/DMA zéro-copie optimisé via intrinsèques NEON, atteignant un temps réel souple avec une empreinte mémoire minime (200Mo → 6Mo)."
+          - "Conception d'un pipeline MLOps complet pour YOLO11 : génération de données synthétiques, entraînement curriculum et export TensorRT."
+      - company: Armée de Terre - 13ème DBLE
+        position: Militaire
+        start_date: 2017
+        end_date: 2018
+        location: France
+    projets:
+      - name: Compilateur C11 en Zig
+        date: 2025
+        highlights:
+          - "Développement from scratch d'un compilateur C11 complet en Zig."
+          - "Robuste et capable de compiler des projets réels d'envergure comme MySQL."
+      - name: ZigCleaner (zc)
+        date: 2025
+        highlights:
+          - "Utilitaire de nettoyage de fichiers haute performance développé en Zig."
+          - "Scanne 200 000+ répertoires en < 1s via un pool de threads optimisé."
+          - "Suppression récursive d'artefacts de build pour libérer de l'espace disque."
+      - name: Développement embarqué sur ATMega328p
+        date: 2025
+        highlights:
+          - "Implémentation de drivers bas-niveau pour I2C, SPI et UART avec manipulation directe des registres."
+          - "Gestion des interruptions matérielles et développement de pilotes pour divers capteurs."
+      - name: Développement Netcode Multithreaded
+        date: 2024
+        highlights:
+          - "Simulation Lock-Step de pointe et architecture Thread-per-game en Zig."
+          - "Création d'un format de sérialisation binaire sur-mesure minimisant la latence client (< 1 ms)."
+          - "Optimisation de l’empreinte mémoire (< 512 Kb RAM)."
+    éducation:
+      - institution: 42 Paris
+        area: Spécialisation bas-niveau / embarqué / Kernel
+        start_date: 2023
+        end_date: 2025
+        location: Paris, France
+      - institution: UBS Vannes
+        area: Licence Économie appliquée
+        start_date: 2020
+        end_date: 2021
+        location: Vannes, France
+
+design:
+  theme: engineeringresumes
+  page:
+    top_margin: 0.4in
+    bottom_margin: 0.4in
+    left_margin: 0.4in
+    right_margin: 0.4in
+  header:
+    space_below_name: 0.15cm
+    space_below_headline: 0.15cm
+    space_below_connections: 0.15cm
+  section_titles:
+    type: with_full_line
+    line_thickness: 0.5pt
+    space_above: 0.25cm
+    space_below: 0.15cm
+  sections:
+    space_between_regular_entries: 0.15cm
+    space_between_text_based_entries: 0.15cm
+  entries:
+    short_second_row: true
+locale:
+  language: french
+settings:
+  render_command:
+    pdf_path: rendercv_output/Pierre_Ollivier_CV_FR.pdf
+    typst_path: rendercv_output/Pierre_Ollivier_CV_FR.typ
+    markdown_path: rendercv_output/Pierre_Ollivier_CV_FR.md
+    html_path: rendercv_output/Pierre_Ollivier_CV_FR.html
+    png_path: rendercv_output/Pierre_Ollivier_CV_FR.png
